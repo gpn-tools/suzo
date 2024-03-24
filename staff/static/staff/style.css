@@ -1,0 +1,106 @@
+:root {
+    /* main colors */
+    --color1: #003274; /* dark blue */ 
+    --color2: #025EA1; /* normal blue */ 
+    --color3: #6CACE4; /* light blue */ 
+    --color4: #333333; /* 90% gray */ 
+
+    --color5: #000000; /* black */ 
+    --color6: #7F7F7F; /* 50% gray */ 
+    --color7: #ffffff; /* white */
+    --color8: #5F6062; /* 70% gray */ 
+
+    --color9: #F0A600; /* orange */
+    --color10: #FF4A05; /* orange-red  */
+    --color11: #32CA7A; /* green - blue */
+    --color12: #B42672; /* violet */
+    --color13: #A5ED00; /* light green */
+    
+    --header_footer_height: 10%;
+}
+
+* {
+    font-family: Arial;
+}
+
+
+/* ид верхнего меню */
+#top_menu {
+    border-bottom: solid 1px var(--color1);
+}
+
+/* общие свойства списка меню */
+#top_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* свойства верхних элементов списка */
+#top_menu ul li {
+    display: inline-block;
+}
+
+/* свойства ссылок в верхних элементах списка */
+#top_menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    color: var(--color7);
+    text-decoration: none;
+}
+
+/* реакция на наведение мыши на ссылки меню */
+#top_menu ul li a:hover {
+    background-color: var(--color1);
+    text-decoration: underline;
+}
+
+/* свойства подсписков (выпадающих) */
+#top_menu ul li ul {
+    display: none;
+    position: absolute;
+    background-color: var(--color2);
+    box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color1);
+}
+
+/* изменение видимости подсписков при наведении на род. пункт меню */
+#top_menu ul li:hover ul {
+    display: block;
+}
+
+/* свойства пунктов подменю */
+#top_menu ul li ul li {
+    display: block;
+    white-space: nowrap;
+}
+
+body {
+    margin: 0px;
+    display: grid; 
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; 
+}
+
+header {
+    margin: 0px;
+}
+
+main {
+    background-color: var(--color3);
+    margin: 0px;
+}
+
+footer {
+    margin: 0px;
+    height: 42px;
+    border-top: solid 1px var(--color1);
+}
+
+header, footer {
+    background-color: var(--color2);
+    text-decoration: none;
+    font-size: 16px; 
+    color: var(--color7);
+}

@@ -1,0 +1,25 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cистема учёта задач отдела</title>
+  <link rel="stylesheet" href="{% static '/staff/style.css' %}">
+  <meta name="description" content="">
+  <link rel="icon" href="{% static 'staff/favicon.svg'%}" sizes="any">
+
+  <meta name="theme-color" content="#025EA1">
+</head>
+
+<body>
+    {% include "staff/header.html" %}
+    {% block main %} 
+       Empty block 
+    {% endblock main %}
+    {% include "staff/footer.html" %}
+</body>
+
+</html>
