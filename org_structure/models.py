@@ -32,31 +32,6 @@ class Staff(models.Model):
         verbose_name_plural = "Сотрудники"
         ordering = ["surname"]
 
-"""
-class Org_level_1(models.Model):
-    short_name = models.CharField(max_length=30, verbose_name="Код структурной единицы 1 уровня (группы, лаборатории и т.д.)")
-    full_name = models.CharField(max_length=200, verbose_name="Полное наименование структурной единицы 1 уровня (группы, лаборатории и т.д.)")
-    staff = models.ManyToManyField(to=Staff, verbose_name="Состав", related_name="level1_staff")
-    head = models.ForeignKey(to=Staff, on_delete=models.PROTECT, verbose_name="Начальник")
-    def __str__(self):
-        return f"{self.short_name}"
-    class Meta:
-        verbose_name_plural = "Структурные единицы 1 уровня (группы, лаборатории)"
-        ordering = ["short_name"]
-    
-class Org_level_2(models.Model):
-    short_name = models.CharField(max_length=30, verbose_name="Код структурной единицы 2 уровня (Подразделения)")
-    full_name = models.CharField(max_length=200, verbose_name="Полное наименование структурной единицы 2 уровня (подразделения)")
-    staff = models.ManyToManyField(to=Staff, verbose_name="Непосредственные подчинённые", related_name="level2_staff")
-    org_level_1 = models.ManyToManyField(to=Org_level_1, verbose_name="Подчинённые единицы 1 уровня", related_name="level2_staff")
-    head = models.ForeignKey(to=Staff, on_delete=models.PROTECT, verbose_name="Начальник")
-    def __str__(self):
-        return f"{self.short_name}"
-    class Meta:
-        verbose_name_plural = "Структурные единицы 2 уровня (Подразделения)"
-        ordering = ["short_name"]
-"""
-
 class Org_elements(models.Model):
     short_name = models.CharField(max_length=30, verbose_name="Код структурной единицы")
     full_name = models.CharField(max_length=200, verbose_name="Полное наименование структурной единицы")
